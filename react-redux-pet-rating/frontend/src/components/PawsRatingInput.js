@@ -5,11 +5,15 @@ const PawsRatingInput = ({ rating, disabled, onChange }) => {
   const [activeRating, setActiveRating] = useState(rating);
 
   const handleMouseEnter = (value) => {
-    setActiveRating(value);
+    if (!disabled) {
+      setActiveRating(value);
+    }
   }
 
   const handleMouseLeave = (rating) => {
-    setActiveRating(rating);
+    if (!disabled) {
+      setActiveRating(rating);
+    }
   }
   
   return (
